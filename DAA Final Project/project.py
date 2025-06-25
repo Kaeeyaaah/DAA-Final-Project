@@ -27,7 +27,6 @@ class Project:
     
     # handling emergency situations
     def set_emergency_priority(self, is_emergency):
-        """Set emergency priority based on category during emergency situations"""
         self.is_emergency_priority = is_emergency
         if is_emergency:
             # Set priority levels based on category during emergencies
