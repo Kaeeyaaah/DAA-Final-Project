@@ -89,7 +89,7 @@ class BudgetAllocationGUI:
         # combo box that contains the emergency types
         self.emergency_combo = ttk.Combobox(emergency_frame, textvariable=self.emergency_type,
                                           values=["Typhoon", "Earthquake", "Flood", "Fire", "Health Crisis"],
-                                          state="disabled", width=12)
+                                          state="Disabled", width=12)
         self.emergency_combo.pack(side=tk.LEFT, padx=5)
         
         # button frame
@@ -209,7 +209,7 @@ class BudgetAllocationGUI:
     # emergency mode toggle function
     def toggle_emergency_mode(self):
         is_emergency = self.emergency_mode.get()
-        self.emergency_combo.config(state="normal" if is_emergency else "disabled")
+        self.emergency_combo.config(state="Normal" if is_emergency else "Disabled")
         
         # update all projects once the emergency mode is enabled
         for project in self.projects:
